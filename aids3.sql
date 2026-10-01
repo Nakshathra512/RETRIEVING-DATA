@@ -1,0 +1,21 @@
+show databases;
+ create table student(sid int,name varchar(20),section varchar(20),gpa decimal(2,1),city varchar(20));
+ desc student;
+ insert into student values(101,"star",'a',9.2,"ong");
+ insert into student values(102,"ravi","b",9.0,"kng");
+  insert into student values(103,"raju","c",9.6,"vij");
+   insert into student values(104,"sita","a",8.6,"gnt");
+    insert into student values(105,"gita","a",8.3,"ong");
+    select * from student;
+ select *from student where city='ong' or gpa>8;
+ select * from student where not section='a';
+ SELECT COUNT(*) FROM STUDENT;
+  SELECT SUM(SID) FROM STUDENT;
+  SELECT AVG(GPA) FROM STUDENT;
+   SELECT MAX(GPA) FROM STUDENT WHERE GPA>10;
+   SELECT MIN(GPA) FROM STUDENT WHERE GPA>10;
+    SELECT SECTION,COUNT(*) AS BRANCH FROM STUDENT GROUP BY SECTION;
+     SELECT DISTINCT GPA FROM STUDENT ORDER BY GPA DESC LIMIT 3;
+      SELECT DISTINCT GPA FROM STUDENT ORDER BY GPA ASC LIMIT 3;
+     SELECT SECTION,COUNT(*) AS BRANCH FROM STUDENT GROUP BY SECTION HAVING COUNT(*)>1;
+  
